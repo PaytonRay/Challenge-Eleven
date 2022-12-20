@@ -21,7 +21,7 @@ app.get('/', (req, res) =>
 app.get('/notes', (req, res) =>
   res.sendFile(path.join(__dirname, './public/notes.html'))
 );
-
+//trying this delete function 
 app.delete("/api/notes/:id", (req, res) => {
     const notes = JSON.parse(fs.readFileSync(".db/db.json"));
     const deleteNote = notes.filter((removeNote) => removeNote.id !== req.params.id);
